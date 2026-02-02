@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: white;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.svg-wrapper {
+  width: 95vw;
+  height: 55.42vw;
+  max-width: 400px;
+  max-height: 234px;
+  display: block;
+  margin-bottom: 0;
+}
+
+#frame1 { 
+  opacity: 0; 
+  animation: showFrame 0.2s infinite; 
+}
+
+#frame2 { 
+  opacity: 0; 
+  animation: showFrame 0.2s infinite; 
+  animation-delay: 0.1s; 
+}
+
+@keyframes showFrame {
+  0%, 49.9% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #frame1 { opacity: 1; }
+  #frame2 { opacity: 0; }
+}
